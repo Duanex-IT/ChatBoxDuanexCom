@@ -15,6 +15,8 @@ client = OpenAI(
             api_key=os.getenv('OPENAI_API_KEY')
         )
 
+with open("duanex.txt", "r") as file:
+    my_data = file.read()
 
 @app.route("/chat", methods=["POST"])
 def chat():
@@ -28,7 +30,7 @@ def ask_bot(question):
     completion = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "system", "content": f"You are a helpful assistant. Here is information about our company: {my_data}"},
                 {"role": "user", "content": question},
             ]
         )
