@@ -35,8 +35,16 @@
    ```bash
     python flask_api.py
     ```
+6. Or you can use Docker and build the image:
+    ```bash
+    docker build --tag chat-bot .
+    ```
+    Then run your container with OpenAI API Key:
+    ```bash
+    docker run -p 5000:5000 -e OPENAI_API_KEY="your_openai_api_key_here" chat-bot
+    ```
 
-6. Now open the WordPress. Then go to the section Appearance → Editor and add this code to your web site page:
+7. Now open the WordPress. Then go to the section Appearance → Editor and add this code to your web site page:
 
     HTML
     ```
@@ -69,6 +77,6 @@
 
     </script>
     ```
-7. In the end you should see this:
+8. In the end you should see this:
 
     ![alt text](image.png)
