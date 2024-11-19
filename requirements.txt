@@ -2,3 +2,7 @@ flask
 openai
 flask-cors
 python-dotenv
+gunicorn
+flask-limiter
+flask-caching
+requests
