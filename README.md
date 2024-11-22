@@ -49,7 +49,7 @@
     HTML
     ```
         <div id="chat-widget" style="position:fixed; bottom:20px; right:20px; background:#007bff; color:white; padding:10px; border-radius:5px;">
-        <p>Duan</p>
+        <p>Duanex</p>
         <textarea id="user-input" rows="4" cols="30" placeholder="Ask your question..."></textarea><br>
         <button onclick="sendMessage()">Send</button>
         <div id="bot-response" style="margin-top:10px;"></div>

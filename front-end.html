@@ -4,7 +4,7 @@
 
 <div id="chat-widget">
   <div id="chat-header">
-    <span>Chat with Duan</span>
+    <span>Chat with Duanex</span>
     <button id="close-chat" onclick="toggleChatWidget()">×</button>
   </div>
   <div id="chat-body">
@@ -112,7 +112,7 @@
     document.getElementById("user-input").value = "";
 
     const botMessage = document.createElement("div");
-    botMessage.textContent = "Duan: Thinking...";
+    botMessage.textContent = "Duanex: Thinking...";
     chatHistory.appendChild(botMessage);
 
     fetch("http://your_LAN_ip:5000/chat", {
@@ -122,11 +122,11 @@
     })
       .then((response) => response.json())
       .then((data) => {
-        botMessage.textContent = "Duan: " + data.answer;
+        botMessage.textContent = "Duanex: " + data.answer;
         chatHistory.scrollTop = chatHistory.scrollHeight;
       })
       .catch(() => {
-        botMessage.textContent = "Duan: Sorry, I couldn't understand that.";
+        botMessage.textContent = "Duanex: Sorry, I couldn't understand that.";
       });
   }
 </script>
