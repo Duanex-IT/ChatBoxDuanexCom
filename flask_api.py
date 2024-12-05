@@ -15,7 +15,7 @@ from flask_caching import Cache
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Caching
 app.config["CACHE_TYPE"] = "SimpleCache"
@@ -102,4 +102,4 @@ def ask_bot(question, phone=None, email=None):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=80)
